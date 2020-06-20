@@ -9,7 +9,7 @@
     <header>
       <nav>
         <a href="index.html">
-          <img src="img/logo.svg" alt="Черный логотип интернет-магазина гаджетов «Девайс»">
+          <img src="img/logo.svg" width="163" height="35" alt="Черный логотип интернет-магазина гаджетов «Девайс»">
         </a>
 
         <ul class="user-navigation">
@@ -47,14 +47,179 @@
 
     <main>
 
+      <h1>Моноподы для селфи</h1>
+
+      <ul class="catalog-breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li><a>Каталог товаров</a></li>
+        <li><a>Моноподы для селфи</a></li>
+      </ul>
+
+      <section>
+        <h2>Фильтр:</h2>
+
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
+          <div class="catalog-range-slider">
+            <h3>Стоимость</h3>
+            <!-- Здесь будет фильтр диапазона -->
+          </div>
+
+          <fieldset class="catalog-filter-color">
+            <legend><h3>Цвет</h3></legend>
+            <ul class="filter-color-list">
+              <li>
+                <input id="checkbox-black" type="checkbox" name="black"checked>
+                <label for="checkbox-black">Чёрный</label>
+              </li>
+              <li>
+                <input id="checkbox-white" type="checkbox" name="white">
+                <label for="checkbox-white">Белый</label>
+              </li>
+              <li>
+                <input id="checkbox-blue" type="checkbox" name="blue" checked>
+                <label for="checkbox-blue">Синий</label>
+              </li>
+              <li>
+                <input id="checkbox-red" type="checkbox" name="red" checked>
+                <label for="checkbox-red">Красный</label>
+              </li>
+              <li>
+                <input id="checkbox-pink" type="checkbox" name="pink">
+                <label for="checkbox-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-bluetooth">
+            <legend><h3>Bluetooth</h3></legend>
+            <ul class="filter-bluetooth-list">
+              <li>
+                <input id="have-bluetooth" type="radio" name="bluetooth" value="yes" checked>
+                <label for="have-bluetooth">Есть</label>
+              </li>
+              <li>
+                <input id="no-bluetooth" type="radio" name="bluetooth" value="no">
+                <label for="no-bluetooth">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit">Показать</button>
+
+        </form>
+
+      </section>
+
+      <div class="catalog-sort">
+        <h2>Сортировка:</h2>
+        <ul class="catalog-sort-list">
+          <li class="sort-current">
+            <a>По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По популярности</a>
+          </li>
+        </ul>
+        <ul class="hotels-sort-quantity">
+          <li class="sort-quantity-item ascending">
+            <a href="#">
+              <span class="visually-hidden">По возрастанию</span>
+              <svg width="11" height="10" fill="rgba(0, 0, 0, 0.2)" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10h11L5.5 0z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="sort-quantity-item descending active">
+            <a>
+              <span  class="visually-hidden">По убыванию</span>
+              <svg width="11" height="10" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0h11"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="catalog-price-list">
+        <h2 class="visually-hidden">Список селфи-палок</h2>
+
+        <ul class="price-list">
+          <li>
+            <div class="price-list-image">
+              <img src="amateur-monopod.jpg" width="360" height="380" alt="Любительская селфи-палка с черной рукояткой">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="price-list-desc">
+              <h3><a href="#">Любительская селфи-палка</a></h3>
+              <span class="item-price">500 руб.</span>
+            </div>
+          </li>
+          <li>
+            <div class="price-list-image">
+              <img src="professional-monopod.jpg" width="360" height="380" alt="Профессиональная селфи-палка черного цвета">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="price-list-desc">
+              <h3><a href="#">Профессиональная селфи-палка</a></h3>
+              <span class="item-price">1 500 руб.</span>
+            </div>
+          </li>
+          <li>
+            <div class="price-list-image">
+              <img src="waterproof-monopod.jpg" width="360" height="380" alt="Cелфи-палка для съемок под водой черно-желтая">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="price-list-desc">
+              <h3><a href="#">Непотопляемая селфи-палка</a></h3>
+              <span class="item-price">2 500 руб.</span>
+            </div>
+          </li>
+          <li>
+            <div class="price-list-image">
+              <img src="follow-me-monopod.jpg" width="360" height="380" alt="Cелфи-палка в виде руки">
+              <button type="button">В корзину</button>
+              <button type="button">Добавить к сравнению</button>
+            </div>
+            <div class="price-list-desc">
+              <h3><a href="#">Селфи-палка «Следуй за мной»</a></h3>
+              <span class="item-price">4 900 руб.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="catalog-pagination">
+          <button class="disabled" type="button">Назад</button>
+          <ul class="catalog-pagination-list">
+            <li class="current">
+              <a>1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+          </ul>
+          <button type="button">Вперед</button>
+        </div>
+
+      </section>
+
+
     </main>
 
     <footer class="footer">
 
       <div class="footer-wrapper-row">
-        <a>
-          <img src="img/logo.svg" alt="Желтый логотип интернет-магазина гаджетов «Девайс»">
-        </a href="index.html">
+        <a href="index.html">
+          <img src="img/logo.svg" width="163" height="35" alt="Желтый логотип интернет-магазина гаджетов «Девайс»">
+        </a>
         <ul class="footer-user-navigation">
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
