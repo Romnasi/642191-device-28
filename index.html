@@ -16,7 +16,7 @@
           <li>
             <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
               <label for="search">Поиск по сайту</label>
-              <input id="search" type="search" name="header-search">
+              <input id="search" type="search" name="header-search" placeholder="Поиск по сайту">
               <button class="search-find" type="submit" name="button">Найти</button>
             </form>
           </li>
@@ -92,7 +92,7 @@
           <li class="promo-slider-item">
             <h3 class="visually-hidden">Квадрокоптер с мощным лазером</h3>
             <div class="promo-slider-image">
-              <img src="img/quadcopter.png" width="526" height="334" alt="Черно-белый квадрокоптер с лазером замаскированным под камеру">
+              <img src="img/quadrocopter.png" width="526" height="334" alt="Черно-белый квадрокоптер с лазером замаскированным под камеру">
             </div>
             <div class="slider-right-column">
               <div class="promo-slider-text">
@@ -198,7 +198,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <a href="#">
-          <img src="img/map.png" width="560" height="222" alt="Карта расположения интернет-магазина «Девайс» по адресу Москва, улица Строителей 15">
+          <img src="img/map-mini.png" width="560" height="222" alt="Карта расположения интернет-магазина «Девайс» по адресу Москва, улица Строителей 15">
         </a>
         <a href="#">Напишите нам</a>
       </section>
@@ -263,7 +263,25 @@
 
     <section>
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма -->
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label>Ваше имя:
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
+        </p>
+        <p>
+          <label>Ваш e-mail:
+            <input type="email" name="email" placeholder="email@example.com">
+          </label>
+        </p>
+        <p>
+          <label>Текст письма:
+            <textarea name="text" rows="8" placeholder="В свободной форме"></textarea>
+          </label>
+        </p>
+        <button type="button">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
     </section>
 
   </body>
