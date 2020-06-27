@@ -31,7 +31,7 @@
 
 
 /* visually-hidden */
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -40,7 +40,7 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 
 /* Global */
@@ -88,10 +88,16 @@ img {
 }
 
 .user-navigation {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .site-navigation {
+  margin: 0;
+  padding: 0;
+
   font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -111,7 +117,9 @@ img {
 }
 
 .dropdown-catalog-navigation {
-  font-family:  'Open Sans', Arial, sans-serif;
+  padding: 0;
+
+  font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -128,10 +136,15 @@ img {
 
 /* Promo-slider */
 .promo-slider-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .promo-slider-slogan {
+  margin: 0;
+
   font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -140,21 +153,24 @@ img {
 }
 
 .promo-slider-desc {
+  margin: 0;
+
   line-height: 20px;
 }
 
 .button {
   position: relative;
+  z-index: 1;
+
   font-family: 'Gilroy', Verdana, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
-
   text-transform: uppercase;
   color: var(--basic-black);
-  z-index: 1;
+
 }
 
 .button::before {
@@ -162,15 +178,17 @@ img {
   top: 50%;
   margin-top: -4px;
   left: 0;
+  z-index: -1;
 
   content: '';
   width: 100%;
   height: 8px;
+
   background: var(--special-yellow-dark);
-  z-index: -1;
 }
 
-.button:hover::before {
+.button:hover::before,
+.button:focus::before {
   height: 100%;
   top: 0;
   margin-top: 0;
@@ -180,8 +198,272 @@ img {
    opacity: 0.3;
 }
 
+.slider-specification dd {
+  margin: 0;
+
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+.slider-specification dt {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* promo-slider-controls */
+.promo-slider-controls button {
+  background-color: transparent;
+  border: none;
+}
 
 
+/* product-groups-list */
+.product-groups-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.product-group-name {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
+}
+
+
+/* main-services-slider */
+.main-services-slider {
+  background-color: var(--basic-grey-light);
+}
+
+/* services-slider-list */
+.services-slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services-slider-item h3 {
+  margin: 0;
+
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.services-slider-item p {
+  margin: 0;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+/* services-slider-controls */
+.services-slider-controls button {
+  background-color: transparent;
+  border: none;
+}
+
+/* main-brand-list */
+.main-brand-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-brand-item img {
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+
+.main-brand-item img:hover,
+.brand-section:focus img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+
+/* about-us */
+.about-us h2 {
+  margin: 0;
+
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.about-us p {
+  margin: 0;
+}
+
+/* delivery-services-list */
+.delivery-services-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+.delivery-services-list li {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+
+/* main-contacts */
+.main-contacts h2 {
+  margin: 0;
+
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.main-contacts p {
+  margin: 0;
+}
+
+
+/* Footer */
+.footer {
+  background-color: var(--basic-dark);
+}
+
+.main-footer-logo:hover {
+  opacity: 0.6;
+}
+
+.main-footer-logo:active {
+  opacity: 0.3;
+}
+
+/* footer-user-navigation */
+.footer-user-navigation {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-user-navigation a {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+
+.footer-user-navigation a:hover {
+  opacity: 1;
+}
+
+.footer-user-navigation a:active {
+  opacity: 0.3;
+}
+
+/* footer-addres */
+.footer-addres {
+  margin: 0;
+
+  line-height: 20px;
+  color: var(--basic-white);
+}
+
+/* footer-services-list */
+.footer-services-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-services-list a {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.footer-services-list a:hover {
+  opacity: 0.6;
+}
+
+.footer-services-list a:active {
+  opacity: 0.3;
+}
+
+/* footer-telephone-number */
+.footer-telephone-number,
+.footer-telephone-number a {
+  line-height: 20px;
+  color: var(--basic-white);
+}
+
+/* footer-social */
+.footer-social {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* social-button */
+.social-button path {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  opacity: 0.6;
+}
+
+.social-button:active path {
+  opacity: 0.1;
+}
+
+/* developer */
+.dev-link path {
+  fill: var(--special-yellow-dark);
+}
+
+.dev-link:hover path {
+  opacity: 0.6;
+}
+
+.dev-link:active path {
+  opacity: 0.3;
+}
 
 /* .modal {
   display: none;
