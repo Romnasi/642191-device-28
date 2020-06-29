@@ -1,8 +1,10 @@
 /* Variables */
 :root {
   --basic-black: #000000;
+  --black-opacity-30: rgba(0, 0, 0, 0.3);
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
+  --white-opacity-30: rgba(255, 255, 255, 0.3);
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
   --basic-grey-light: #E5E5E5;
@@ -137,7 +139,7 @@ img {
 
 /* search-find */
 .search-find {
-  display: block;
+  display: none;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 17px;
@@ -154,13 +156,18 @@ img {
   text-transform: uppercase;
 }
 
+.search-field:focus + .search-find {
+  display: block;
+}
+
 .search-find:hover {
+  display: block;
   background-color: var(--basic-black);
   color: var(--basic-white);
 }
 
-.search-find:active span {
-  opacity: 0.3;
+.search-find:active {
+  color: var(--white-opacity-30);
 }
 
 /* site-navigation */
@@ -264,8 +271,8 @@ img {
   margin-top: 0;
 }
 
-.button:active span{
-   opacity: 0.3;
+.button:active {
+   color: var(--black-opacity-30);
 }
 
 .slider-specification dd {
