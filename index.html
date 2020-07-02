@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>«Девайс» интернет-магазин гаджетов c оригинальным дизайном</title>
@@ -7,7 +7,7 @@
     <link  href="css/normalize.css" rel="stylesheet">
     <link  href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -23,7 +23,7 @@
               <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="search">Поиск по сайту</label>
                 <input class="search-field" id="search" type="search" name="header-search" placeholder="Поиск по сайту">
-                <button class="search-find" type="submit" name="button">Найти</button>
+                <button class="search-find" type="submit">Найти</button>
               </form>
             </li>
             <li><a href="#">Войти</a></li>
@@ -307,15 +307,15 @@
 
       <div class="footer-wrapper-row">
         <ul class="footer-social">
-          <li>
-            <a class="social-button" href="#">
+          <li class="social-button">
+            <a href="#">
               <span class="visually-hidden">Фейсбук</span>
               <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M31.997 16c0-8.837-7.162-16-15.998-16C7.163 0 0 7.163 0 16c0 7.984 5.85 14.603 13.499 15.803V20.624H9.437v-4.625H13.5v-3.524c0-4.011 2.389-6.226 6.042-6.226 1.751 0 3.582.312 3.582.312V10.5h-2.016c-1.987 0-2.607 1.233-2.607 2.498V16h4.437l-.709 4.625H18.5v11.179c7.648-1.2 13.499-7.819 13.499-15.804h-.002z"/>
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social-button">
             <a class="social-button" href="#">
               <span class="visually-hidden">Инстаграмм</span>
               <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +323,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social-button">
             <a class="social-button" href="#">
               <span class="visually-hidden">Твиттер</span>
               <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +344,7 @@
 
     </footer>
 
-    <section class="modal">
+    <section class="modal map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map-big.png" width="994" height="593" alt="Карта расположения интернет-магазина «Девайс» по адресу Москва, улица Строителей 15">
       <button type="button">Закрыть</button>

@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --basic-black: #000000;
+  --black-opacity-60: rgba(0, 0, 0, 0.6);
   --black-opacity-30: rgba(0, 0, 0, 0.3);
   --black-opacity-15: rgba(0, 0, 0, 0.15);
   --basic-dark: #363636;
@@ -9,6 +10,9 @@
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
   --basic-grey-light: #E5E5E5;
+  --basic-grey-dark:#DCDCDC;
+  --pagination-background: #EBEBEB;
+  --pagination-button-hover: #D9D9D9;
   --special-yellow: #F7E296;
   --special-green: #91C92F;
   --special-yellow-dark:#F0C52E;
@@ -87,10 +91,6 @@ img {
 
 .main-navigation a {
   color: var(--basic-black);
-}
-
-.navigation-wrapper {
-  background-color: var(--special-yellow);
 }
 
 .user-navigation {
@@ -599,4 +599,264 @@ input.field-error {
 .send {
   background-color: transparent;
   border: none;
+}
+
+
+/* Inner-page */
+.inner-page h1 {
+  margin: 0;
+
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+.breadcrumbs-current {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Filter */
+.catalog-filter {
+  background-color: var(--basic-grey-light);
+}
+
+.catalog-filter h2,
+.catalog-filter h3 {
+  margin: 0;
+}
+
+.catalog-filter h2 {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--basic-grey-dark);
+}
+
+.catalog-filter legend {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.catalog-filter ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-filter h3 {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+/* fieldset */
+.catalog-filter fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter label {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* show */
+.catalog-filter .show {
+  border: none;
+  background-color: transparent;
+}
+
+/* catalog-sort */
+.catalog-sort {
+  background-color: var(--basic-grey-light);
+}
+
+.catalog-sort h2 {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.catalog-sort ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-sort-list a {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.catalog-sort-list a:hover {
+  opacity: 0.6;
+}
+
+.catalog-sort-list a:active {
+  opacity: 1;
+}
+
+.sort-current a:not([href]) {
+  opacity: 1;
+}
+
+/* hotels-sort-quantity */
+.sort-quantity-item path {
+  fill: var(--basic-black);
+  opacity: 0.2;
+}
+
+.sort-quantity-item.active path {
+  opacity: 1;
+}
+
+.sort-quantity-item:hover:not(.active) path {
+  opacity: 0.4;
+}
+
+.sort-quantity-item:active:not(.active) path {
+  opacity: 1;
+}
+
+/* price-list */
+.price-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* add-compare */
+.add-compare {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  color: var(--basic-black);
+}
+
+.add-compare:hover {
+  opacity: 1;
+}
+
+.add-compare:active {
+  opacity: 0.2;
+}
+
+/* price-list-desc */
+.price-list-desc h3 {
+  margin: 0;
+}
+
+.price-list-desc a {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
+}
+
+.price-list-desc .item-price {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+/* catalog-pagination */
+.catalog-pagination-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pagination-item a {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-opacity-30);
+  background-color: var(--pagination-background);
+}
+
+.pagination-item a:hover {
+  color: var(--black-opacity-60);
+}
+
+.pagination-item a:hover {
+  color: var(--basic-black);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-black);
+}
+
+/* pagination-button */
+.pagination-button {
+  font-family: 'Gilroy', Verdana, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
+  background-color: var(--pagination-background);
+}
+
+.pagination-button:hover {
+  background-color: var(--pagination-button-hover);
+}
+
+.pagination-button:active {
+  color: var(--black-opacity-30);
+  background-color: var(--pagination-button-hover);
+}
+
+.pagination-button.disabled:not([href]) {
+  cursor: default;
+  color: var(--basic-black);
+  background-color: var(--pagination-background);
 }
