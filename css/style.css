@@ -65,8 +65,8 @@ body {
   line-height: 28px;
   color: var(--basic-black);
   background-color: var(--basic-white);
-}
 
+}
 a {
   text-decoration: none;
 }
@@ -91,6 +91,9 @@ img {
     '. footer .';
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Main-navigation */
@@ -142,7 +145,7 @@ img {
   box-sizing: border-box;
 
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 
 /* main-header-search */
@@ -156,11 +159,12 @@ img {
 .main-header-search svg {
   position: absolute;
   top: 50%;
-  margin-top: -16px;
+  margin-top: -7px;
 }
 
 .search-field {
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   padding-left: 38px;
   padding-right: 15px;
   box-sizing: border-box;
@@ -197,8 +201,8 @@ img {
 /* search-find */
 .search-find {
   display: none;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   padding-left: 17px;
   padding-right: 17px;
   background-color: transparent;
@@ -240,24 +244,44 @@ img {
   list-style: none;
 }
 
-.user-navigation li:first-child {
-  margin-right: auto;
-}
-
-.user-navigation li:not(:first-child) {
-  margin-right: 60px;
-}
-
-.user-navigation li:not(:first-child) {
-
-}
-
-.header-enter {
+.user-navigation li {
   position: relative;
 }
 
+
+.user-navigation li:nth-child(3n+1) {
+  padding-left: 14px;
+  margin-right: auto;
+}
+
+.user-navigation li:nth-child(3n+2) {
+  margin-right: 25px;
+  padding-left: 40px;
+}
+
+.user-navigation li:nth-child(3n+3)  {
+  margin-right: 60px;
+  padding-left: 40px;
+}
+
 .header-enter svg {
-  /* position: absolute; */
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  margin-top: -4px;
+}
+
+.header-compare svg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -4px;
+}
+.header-cart svg {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  margin-top: -5px;
 }
 
 /* site-navigation */
@@ -376,7 +400,8 @@ img {
 .promo-slider-image {
   display: flex;
   width: 50%;
-  padding-right: 25px;
+  margin-right: 35px;
+  padding-top: 15px;
 }
 
 .promo-slider-image img {
@@ -387,10 +412,23 @@ img {
 }
 
 .slider-right-column {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
   padding-top: 111px;
+  z-index: 1;
+}
+
+.slider-right-column::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 8px;
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
+  z-index: -1;
 }
 
 .promo-slider-text {
@@ -400,7 +438,7 @@ img {
 .promo-slider-slogan {
   margin: 0;
   margin-bottom: 26px;
-  padding-left: 10px;
+  padding-left: 2px;
   padding-right: 60px;
 
   font-family: 'Gilroy', Verdana, sans-serif;
@@ -412,7 +450,7 @@ img {
 
 .promo-slider-desc {
   margin: 0;
-  padding-left: 10px;
+  padding-left: 2px;
   padding-right: 60px;
 
   line-height: 20px;
@@ -466,7 +504,7 @@ img {
 /* slider-button */
 .slider-button {
   display: block;
-  margin-left: 9px;
+  margin-left: 4px;
   margin-right: auto;
   margin-bottom: 52px;
   padding-left: 43px;
@@ -496,19 +534,21 @@ img {
   flex-wrap: wrap;
 
   margin: 0;
-  padding-left: 10px;
+  padding-left: 4px;
   padding-right: 60px;
 }
 
 .slider-specification div {
   display: flex;
   flex-direction: column-reverse;
+  margin-right: 61px;
+}
+
+.slider-specification div:last-child {
+  margin-right: auto;
 }
 
 .slider-specification dt {
-  width: 160px;
-
-
   font-family: 'Gilroy', Verdana, sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -517,12 +557,11 @@ img {
 }
 
 .slider-specification dt:last-child {
-  margin-right: auto;
   flex-grow: 1;
 }
 
 .slider-specification dd {
-  min-width: 160px;
+  /* min-width: 160px; */
   margin: 0;
   margin-bottom: 15px;
 
@@ -935,8 +974,26 @@ img {
   list-style: none;
 }
 
+.footer-enter svg {
+  position: absolute;
+  top: 10px;
+  left: -23px;
+}
+
+.footer-compare svg {
+  position: absolute;
+  top: 11px;
+  left: -23px;
+}
+.footer-cart svg {
+  position: absolute;
+  top: 9px;
+  left: -23px;
+}
+
 .footer-user-navigation li {
-  margin-left: 62px;
+  position: relative;
+  margin-left: 65px;
 }
 
 .footer-user-navigation a {
