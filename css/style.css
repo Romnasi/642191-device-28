@@ -20,6 +20,7 @@
   --input-background: #F2F2F2;
   --input-background-hover: #EAEAEA;
   --field-error: #F6DADA;
+  --background-item-hover: rgba(238, 238, 238, 0.5);
 }
 
 /* Fonts */
@@ -1584,7 +1585,7 @@ input.field-error {
   position: absolute;
   width: 360px;
   height: 380px;
-  background-color: rgba(238, 238, 238, 0.5);
+  background-color: var(--background-item-hover);
 }
 
 .price-list-item:hover .hover-background-item {
@@ -1640,6 +1641,15 @@ input.field-error {
   margin-right: auto;
 
   line-height: 22px;
+}
+
+.price-list-desc h3:hover,
+.price-list-desc h3:focus {
+  opacity: 0.6;
+}
+
+.price-list-desc h3:active {
+  opacity: 0.3;
 }
 
 .price-list-desc a {
