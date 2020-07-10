@@ -1665,3 +1665,17 @@ input.field-error {
   color: var(--basic-black);
   background-color: var(--pagination-background);
 }
+
+.new-product {
+  position: relative;
+}
+
+.new-product::after {
+  content: '';
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  width: 62px;
+  height: 62px;
+  background-image: url(../img/new-product.svg);
+}
