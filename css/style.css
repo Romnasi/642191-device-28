@@ -3,6 +3,7 @@
   --basic-black: #000000;
   --black-opacity-60: rgba(0, 0, 0, 0.6);
   --black-opacity-30: rgba(0, 0, 0, 0.3);
+  --black-opacity-20: rgba(0, 0, 0, 0.2);
   --black-opacity-15: rgba(0, 0, 0, 0.15);
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
@@ -95,13 +96,12 @@ img {
 
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--basic-white);
 }
 
 /* Main-navigation */
 .main-header {
   grid-area: header;
-  background-color: var(--basic-white);
-
 }
 
 .main-navigation {
@@ -116,17 +116,7 @@ img {
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
-  z-index: 1;
-}
-
-.main-navigation::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  width: 1160px;
-  height: 300px;
-  background-color: var(--special-yellow);
-  z-index: -1;
+  z-index: 2;
 }
 
 .main-navigation a {
@@ -389,7 +379,7 @@ img {
 
   list-style: none;
   background-color: var(--special-yellow);
-  z-index: 2;
+  z-index: 1;
 }
 
 .dropdown-catalog-navigation li:nth-child(4n+4) {
@@ -423,12 +413,21 @@ img {
 /* Main-container */
 .main-container {
   grid-area: main;
-  background-color: var(--basic-white);
 }
 
 /* main-promo-slider */
 .main-promo-slider {
   position: relative;
+}
+
+.main-promo-slider::before {
+  content: "";
+  position: absolute;
+  top: -153px;
+  width: 1160px;
+  height: 300px;
+  background-color: var(--special-yellow);
+  z-index: -1;
 }
 
 /* Promo-slider-list */
@@ -1275,6 +1274,16 @@ input.field-error {
   margin-bottom: 77px;
 }
 
+.inner-page .navigation-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 1160px;
+  height: 186px;
+  background-color: var(--special-yellow);
+  z-index: -1;
+}
+
 .logged {
   display: grid;
   grid-template-columns: 160px 100px 140px 120px;
@@ -1421,7 +1430,7 @@ input.field-error {
   position: relative;
   display: block;
 
-  margin-bottom: 32px;
+  margin-bottom: 19px;
   padding-left: 60px;
 
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1441,6 +1450,96 @@ input.field-error {
   background-color: var(--basic-black);
 }
 
+
+
+/* catalog-range-slider */
+.catalog-range-slider {
+  margin-bottom: 67px;
+}
+
+.range-slider-track {
+  position: relative;
+  margin-left: 60px;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 42px;
+
+  padding-top: 20px;
+}
+
+.scale {
+  width: 200px;
+  height: 2px;
+  background-color: var(--black-opacity-20);
+}
+
+.range-slider-track .bar {
+  width: 50%;
+  height: 2px;
+  background-color: var(--special-green);
+}
+
+.pin {
+  position: absolute;
+  top: 50%;
+
+  width: 19px;
+  height: 21px;
+
+  margin-top: -9px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+
+.pin-min {
+  left: 0;
+}
+
+.pin-max {
+  left: 100px;
+}
+
+/* price-output */
+.price-output {
+  position: absolute;
+  top: 33px;
+}
+
+.price-min {
+  left: 0;
+}
+
+.price-max {
+  left: 100px;
+  margin-left: -18px;
+}
+
+/* fieldset */
+.catalog-filter fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* catalog-filter-color */
+.catalog-filter .catalog-filter-color {
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 0;
+  border: none;
+}
+
+.catalog-filter-color h3 {
+  margin-bottom: 27px;
+}
+
+.filter-color-list li:not(:last-child) {
+  margin-bottom: 11px;
+}
+
 .catalog-filter legend {
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 800;
@@ -1451,20 +1550,20 @@ input.field-error {
 
 .filter-color-list {
   margin: 0;
-  margin-bottom: 56px;
   padding: 0;
   padding-left: 60px;
 
   list-style: none;
 }
 
-.filter-color-list li:not(:last-child) {
-  margin-bottom: 20px;
+/* catalog-filter-bluetooth */
+.catalog-filter-bluetooth h3 {
+  margin-bottom: 27px;
 }
 
 .filter-bluetooth-list {
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 40px;
   padding: 0;
   padding-left: 60px;
 
@@ -1472,21 +1571,18 @@ input.field-error {
 }
 
 .filter-bluetooth-list li:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-/* fieldset */
-.catalog-filter fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 12px;
 }
 
 .catalog-filter label {
-  padding-left: 40px;
+  padding-left: 25px;
 
   font-size: 14px;
   line-height: 19px;
+}
+
+.catalog-filter-bluetooth label {
+  padding-left: 10px;
 }
 
 /* show */
