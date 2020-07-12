@@ -1396,12 +1396,27 @@ input.field-error {
 
 /* Filter */
 .catalog-filter {
+  position: relative;
+
   grid-column: 1 / 2;
   grid-row-start: 3;
   grid-row-end: 5;
 
+  background-color: var(--basic-grey-light);
+}
+
+.catalog-filter::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  transform: var(--basic-grey-dark);
 
   background-color: var(--basic-grey-light);
+  z-index: -2;
 }
 
 .catalog-filter h2,
@@ -1410,6 +1425,8 @@ input.field-error {
 }
 
 .catalog-filter h2 {
+  position: relative;
+
   margin-bottom: 86px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -1424,6 +1441,20 @@ input.field-error {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background-color: var(--basic-grey-dark);
+}
+
+.catalog-filter h2::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  transform: var(--basic-grey-dark);
+
+  background-color: var(--basic-grey-dark);
+  z-index: -1;
 }
 
 .catalog-filter h3 {
@@ -1678,6 +1709,7 @@ input.field-error {
 
 /* catalog-sort */
 .catalog-sort {
+  position: relative;
   grid-column: 2 / -1;
   display: flex;
   align-items: baseline;
@@ -1686,6 +1718,20 @@ input.field-error {
   padding-right: 4px;
 
   background-color: var(--basic-grey-light);
+}
+
+.catalog-sort::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  transform: translateX(50%);
+
+  background-color: var(--basic-grey-light);
+  z-index: -3;
 }
 
 .catalog-sort h2 {
