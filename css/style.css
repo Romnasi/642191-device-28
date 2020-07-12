@@ -18,6 +18,8 @@
   --special-yellow-rare: #FFC600;
   --special-green: #91C92F;
   --special-yellow-dark: #F0C52E;
+  --yellow-dark-opacity-50: rgba(240, 197, 46, 0.5);
+  --yellow-dark-opacity-30: rgba(240, 197, 46, 0.3);
   --input-background: #F2F2F2;
   --input-background-hover: #EAEAEA;
   --field-error: #F6DADA;
@@ -57,7 +59,7 @@
 
 /* Global */
 body {
-  min-width: 1180px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -421,7 +423,7 @@ img {
 }
 
 .main-promo-slider::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -153px;
   width: 1160px;
@@ -975,6 +977,8 @@ img {
 }
 
 
+
+
 /* Footer */
 .footer {
   position: relative;
@@ -1204,27 +1208,105 @@ img {
   opacity: 0.3;
 }
 
-/* modal */
-.modal {
+
+
+
+/* modal-hide */
+.modal-hide {
   display: none;
+}
+
+/* modal-map */
+.modal-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+
+  margin-top: -296px;
+  margin-left: -497px;
+
+  width: 958px;
+  height: 553px;
+  background-image: url(../img/map-big-fallback.png);
+  box-shadow: 0px 10px 16px var(--black-opacity-15);
+  z-index: 10;
+}
+
+.modal-map iframe {
+  border: none;
+}
+
+.modal-map .modal-close {
+  top: 31px;
+  right: 34px;
 }
 
 /* write-us */
 .write-us {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  margin-top: -275px;
+  margin-left: -480px;
+  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  width: 960px;
+
+  box-sizing: border-box;
   color: var(--basic-black);
   background-color: var(--basic-white);
   box-shadow: 0px 10px 16px var(--black-opacity-15);
+  z-index: 5;
+}
+
+.write-us-row-wrapper {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.write-us-row-wrapper p {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.write-us-row-wrapper p:last-child {
+  margin-right: 0;
+}
+
+.write-us-text-wrapper {
+  margin-bottom: 42px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .write-us label {
+  margin-bottom: 10px;
+
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
 }
 
+.write-us input {
+  width: 360px;
+}
+
 .write-us input,
 .write-us textarea {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   border: 2px solid transparent;
   background-color: var(--input-background);
 }
@@ -1255,8 +1337,55 @@ input.field-error {
 
 /* send */
 .send {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 34px;
+  padding-right: 34px;
+
   background-color: transparent;
   border: none;
+}
+
+/* modal-close */
+.modal-close {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  background-color: var(--yellow-dark-opacity-50);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--special-yellow-dark);
+}
+
+.modal-close:active {
+  background-color: var(--yellow-dark-opacity-30);
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 
 
@@ -1275,7 +1404,7 @@ input.field-error {
 }
 
 .inner-page .navigation-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 40px;
   width: 1160px;
@@ -1536,7 +1665,12 @@ input.field-error {
 /* price-output */
 .price-output {
   position: absolute;
-  top: 33px;
+  width: 70px;
+  padding-right: 5px;
+  top: 38px;
+
+  background-color: transparent;
+  border: none;
 }
 
 .price-min {
@@ -1545,7 +1679,7 @@ input.field-error {
 
 .price-max {
   left: 100px;
-  margin-left: -18px;
+  margin-left: -16px;
 }
 
 /* fieldset */
