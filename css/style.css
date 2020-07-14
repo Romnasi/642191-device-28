@@ -639,7 +639,8 @@ img {
   display: flex;
   flex-direction: column-reverse;
   margin-right: 61px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  max-width: 200px;
 }
 
 .slider-specification div:last-child {
