@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Variables */
 :root {
   --basic-black: #000000;
@@ -93,6 +100,7 @@ img {
     '. header .'
     '. main .'
     '. footer .';
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 
@@ -103,6 +111,8 @@ img {
 
 /* Main-navigation */
 .main-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: header;
 }
 
@@ -178,6 +188,24 @@ img {
   border-bottom: 2px solid var(--basic-black);
 }
 
+.search-field::-webkit-input-placeholder {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.search-field::-moz-placeholder {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
 .search-field::placeholder {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
@@ -185,6 +213,14 @@ img {
   line-height: 20px;
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.search-field:hover::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.search-field:hover::-moz-placeholder {
+  opacity: 0.6;
 }
 
 .search-field:hover::placeholder {
@@ -405,6 +441,8 @@ img {
 
 /* Main-container */
 .main-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: main;
 }
 
@@ -435,6 +473,8 @@ img {
 }
 
 .promo-slider-item {
+  box-sizing: border-box;
+  min-height: 508px;
   display: flex;
   position: relative;
   margin-bottom: 115px;
@@ -849,13 +889,15 @@ img {
 }
 
 .main-brand-item img {
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   opacity: 0.2;
 }
 
 .main-brand-item img:hover,
 .brand-section:focus img {
-  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
   opacity: 1;
 }
 
@@ -915,6 +957,7 @@ img {
 }
 
 .delivery-services-list li {
+  position: relative;
   margin-bottom: 15px;
 
   font-family: 'Gilroy', Arial, sans-serif;
@@ -922,6 +965,19 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+}
+
+.delivery-services-list li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -32px;
+
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--basic-grey-light);
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .delivery-services-list li:last-child {
@@ -992,6 +1048,8 @@ img {
 
 /* Footer */
 .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   position: relative;
   grid-area: footer;
   background-color: var(--basic-dark);
@@ -1329,6 +1387,20 @@ img {
   outline: none;
 }
 
+.write-us input::-webkit-input-placeholder, .write-us textarea::-webkit-input-placeholder {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.write-us input::-moz-placeholder, .write-us textarea::-moz-placeholder {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
 .write-us input::placeholder,
 .write-us textarea::placeholder {
   font-family: inherit;
@@ -1393,11 +1465,13 @@ img {
 /* modal-show */
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .field-error {
@@ -1687,6 +1761,22 @@ img {
   background-color: transparent;
   border: none;
 
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price-output::-webkit-input-placeholder {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price-output::-moz-placeholder {
   font-family: 'Gilroy', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -2247,6 +2337,24 @@ img {
 
 /* Animations */
 
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2262,6 +2370,28 @@ img {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
