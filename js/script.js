@@ -22,6 +22,16 @@ let promoSliderFirst = promoSliders.querySelector('.promo-slider-first');
 let promoSliderSecond = promoSliders.querySelector('.promo-slider-second');
 let promoSliderThird = promoSliders.querySelector('.promo-slider-third');
 
+// Variables for Service-slider
+let serviceButtons = document.querySelector('.services-slider-controls');
+let serviceButtonFirst = serviceButtons.querySelector('.service-slider-button-first');
+let serviceButtonSecond = serviceButtons.querySelector('.service-slider-button-second');
+let serviceButtonThird = serviceButtons.querySelector('.service-slider-button-third');
+let serviceSliders = document.querySelector('.services-slider-list');
+let serviceSliderFirst = serviceSliders.querySelector('.service-slider-first');
+let serviceSliderSecond = serviceSliders.querySelector('.service-slider-second');
+let serviceSliderThird = serviceSliders.querySelector('.service-slider-third');
+
 // Variables for localStorage
 let isStorageSupport = true;
 let storage = '';
@@ -99,8 +109,6 @@ window.addEventListener("keydown", function (evt) {
 promoButtonFirst.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (promoButtonFirst.classList.contains("promo-slider-button-active")) {
-    formPopup.offsetWidth = formPopup.offsetWidth;
-    promoSliderFirst.classList.remove('hide-slide');
   } else {
     promoButtonSecond.classList.remove('promo-slider-button-active');
     promoButtonThird.classList.remove('promo-slider-button-active');
@@ -111,7 +119,6 @@ promoButtonFirst.addEventListener('click', function (evt) {
     promoSliderFirst.classList.remove('hide-slide');
     promoSliderSecond.classList.add('hide-slide');
     promoSliderThird.classList.add('hide-slide');
-
   }
 });
 
@@ -119,7 +126,6 @@ promoButtonFirst.addEventListener('click', function (evt) {
 promoButtonSecond.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (promoButtonSecond.classList.contains("promo-slider-button-active")) {
-
   } else {
     promoButtonFirst.classList.remove('promo-slider-button-active');
     promoButtonThird.classList.remove('promo-slider-button-active');
@@ -137,7 +143,6 @@ promoButtonSecond.addEventListener('click', function (evt) {
 promoButtonThird.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (promoButtonThird.classList.contains("promo-slider-button-active")) {
-
   } else {
     promoButtonFirst.classList.remove('promo-slider-button-active');
     promoButtonSecond.classList.remove('promo-slider-button-active');
@@ -148,5 +153,56 @@ promoButtonThird.addEventListener('click', function (evt) {
     promoSliderThird.classList.remove('hide-slide');
     promoSliderFirst.classList.add('hide-slide');
     promoSliderSecond.classList.add('hide-slide');
+  }
+});
+
+// Service-slider
+serviceButtonFirst.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (serviceButtonFirst.classList.contains("current-service-btn")) {
+  } else {
+    serviceButtonSecond.classList.remove('current-service-btn');
+    serviceButtonThird.classList.remove('current-service-btn');
+    serviceButtonFirst.classList.add('current-service-btn');
+  };
+
+  if (serviceSliderFirst.classList.contains('hide-slide')) {
+    serviceSliderFirst.classList.remove('hide-slide');
+    serviceSliderSecond.classList.add('hide-slide');
+    serviceSliderThird.classList.add('hide-slide');
+  }
+});
+
+
+serviceButtonSecond.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (serviceButtonSecond.classList.contains("current-service-btn")) {
+  } else {
+    serviceButtonFirst.classList.remove('current-service-btn');
+    serviceButtonThird.classList.remove('current-service-btn');
+    serviceButtonSecond.classList.add('current-service-btn');
+  };
+
+  if (serviceSliderSecond.classList.contains('hide-slide')) {
+    serviceSliderSecond.classList.remove('hide-slide');
+    serviceSliderFirst.classList.add('hide-slide');
+    serviceSliderThird.classList.add('hide-slide');
+  }
+});
+
+
+serviceButtonThird.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (serviceButtonThird.classList.contains("current-service-btn")) {
+  } else {
+    serviceButtonFirst.classList.remove('current-service-btn');
+    serviceButtonSecond.classList.remove('current-service-btn');
+    serviceButtonThird.classList.add('current-service-btn');
+  };
+
+  if (serviceSliderThird.classList.contains('hide-slide')) {
+    serviceSliderThird.classList.remove('hide-slide');
+    serviceSliderFirst.classList.add('hide-slide');
+    serviceSliderSecond.classList.add('hide-slide');
   }
 });
