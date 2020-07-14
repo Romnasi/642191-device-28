@@ -1675,6 +1675,20 @@ img {
 
   background-color: transparent;
   border: none;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price-output::placeholder {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .price-min {
@@ -1745,17 +1759,20 @@ img {
   margin-bottom: 12px;
 }
 
-.catalog-filter label {
+.filter-color-list label,
+.catalog-filter-bluetooth label {
   position: relative;
   padding-left: 42px;
 
   font-size: 14px;
   line-height: 19px;
-}
-
-.catalog-filter-bluetooth label {
   padding-left: 40px;
 }
+
+.filter-color-list label {
+  padding-left: 42px;
+}
+
 
 /* filter-input-checkbox */
 .filter-input-checkbox + label::before {
