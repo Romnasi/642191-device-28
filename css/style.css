@@ -314,10 +314,6 @@ img {
   padding-left: 20px;
 }
 
-.site-navigation li:last-child:not(.dropdown-catalog-navigation li) {
-  text-align: right;
-}
-
 .site-navigation a {
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 800;
@@ -354,11 +350,6 @@ img {
 .catalog-navigation:hover .dropdown-catalog-navigation,
 .dropdown-catalog-navigation:hover {
   display: grid;
-}
-
-.catalog-navigation:hover < .main-header,
-.dropdown-catalog-navigation:hover < .main-header {
-  z-index: 2;
 }
 
 /* dropdown-catalog-navigation */
